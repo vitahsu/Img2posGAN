@@ -1,16 +1,7 @@
-VLSILAB 交接報告
-===
+# Master thesis and oral slides
 
-- 學生：徐子媛
-- 學位：碩士
-- 指導教授：謝明得
+由於檔案較大，我使用學校提供之[永久雲端](https://drive.google.com/drive/folders/19FEkDTX5GmScXjmkXKrxhqItJ3saiXJa?usp=sharing)存放。
 
-## 目錄
-連進去頁末都有說明  
-注：所有文件都以README.md (Markdown language) 撰寫  
-
-1. [Thesis](1_Thesis)
-2. [Meeting slides](2_Meeting_slides)
-3. [Code](3_Code)
-4. [Document](4_Document)
-5. [Paper](5_Paper)
+- `ncku-110-N26074752.pdf` - Master thesis
+- `Oral_zy.pptx` - Oral slides
+- `Oral_zy_speech.pptx` - Oral slides with speech
