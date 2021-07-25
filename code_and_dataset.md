@@ -2,25 +2,38 @@ Code and Dataset
 ===
 
 ## Code setup
-- Path to code (handover/3_Code/LCFD.zip)
+### PRNet
+- Path to code (handover/3_Code/PRNet.zip)
+	- training_code_PRNet_tensorflow
+	- testing_PRNet-master
 - Extract the files to your own workspace
-- The above path (/path/to/LCFD) is noted as LCFD_ROOT in the following document
+- Details: PRNet official [github](https://github.com/YadiraF/PRNet) 
 
+### Img2pos GAN
+- Path to code (handover/3_Code/Img2posGAN.zip)
+	- pix2pix-tensorflow-master
+		- training
+		- testing
+- Extract the files to your own workspace
+- Details: Pix2pixGAN tensorflow official [github](https://github.com/affinelayer/pix2pix-tensorflow) 
+
+### Experimental results analysis
+- Path to code (handover/3_Code/paper_analysis)
+	- draw_CED.py: paper figure
+	- error_bar: comparison of models and do pose analysis and thesis figures
+		- information in total_error_list_2Dkp is important!!!!!!!!!! 
+		
 ## Dataset setup
-- (option1) Download WIDERFACE dataset from [official website](http://shuoyang1213.me/WIDERFACE/)
-- (option2) Copy from (handover/3_Code/dataset/wider_ws)
-- Extract or copy WIDERFACE dataset to your desired path
+- untar training_dataset.tar and benchmark_dataset.tar from handover/3_Code/ to your desired path
+	- training_dataset.tar: 300W-LP download from [3DFFA official website](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm)
+		- angle_npy: pose including pitch, yaw, and roll in each data
+		- InputImage: 2D facial images
+		- LabelImage: visiualized uv position map
+		- LabelImage_npy: the real one to train (because having neg. numver)
+	- benchmark_dataset.tar
+		- AFLW2000_all: original dataset AFLW2000-3D download from [3DFFA official website](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm)
+		- AFLW2000_all-crop: cropped information
+		- AFLW2000_image_cropped: cropped images
+- Details: How to transform 2D image and 3DMM parameter to uv position map?
+	- please follow [here](https://github.com/YadiraF/face3d/blob/master/examples/8_generate_posmap_300WLP.py)
 
-#### Prepare lists for training and validation
-- Modify paths in (LCFD_ROOT/data/config.py)
-    - _C.FACE.WIDER_DIR = /path/to/WIDER_face
-- Run (LCFD_ROOT/prepare_wider_data.py)
-
-```
-cd LCFD_ROOT
-python prepare_wider_data.py
-```
-
-- 2 files generated in (LCFD_ROOT/data/)
-    - face_train.txt
-    - face_val.txt
