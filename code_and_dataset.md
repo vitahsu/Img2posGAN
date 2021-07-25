@@ -24,12 +24,12 @@ Code and Dataset
 		- information in total_error_list_2Dkp is important!!!!!!!!!! 
 		
 ## Dataset setup
-- untar training_dataset.tar and benchmark_dataset.tar from handover/3_Code/ to your desired path
+- Untar training_dataset.tar and benchmark_dataset.tar from handover/3_Code/ to your desired path
 	- training_dataset.tar: 300W-LP download from [3DFFA official website](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm)
 		- angle_npy: pose including pitch, yaw, and roll in each data
 		- InputImage: 2D facial images
-		- LabelImage: visiualized uv position map
-		- LabelImage_npy: the real one to train (because having neg. numver)
+		- LabelImage: visualized uv position map
+		- LabelImage_npy: the data for training (because data have negative number)
 	- benchmark_dataset.tar
 		- AFLW2000_all: original dataset AFLW2000-3D download from [3DFFA official website](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm)
 		- AFLW2000_all-crop: cropped information

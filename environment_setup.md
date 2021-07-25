@@ -12,7 +12,7 @@ Environment Setup
 nvidia-smi
 ```
 
-## Create nwe enviroment
+## Create new enviroment
 
 ### PRNet enviroment
 - Commit image from [vlsilab docker](https://www.docker.com/get-started)
@@ -28,7 +28,7 @@ nvidia-smi
 ## Existing enviroment
 
 ### PRNet enviroment on work station 102 
-- Start and execuvate docker:
+- Start and execute docker:
 ```
 docker start zy_prnet_tb_gpu2
 docker exec -it zy_prnet_tb_gpu2 bash
@@ -39,7 +39,7 @@ cd /srv/big_data/zy/PRNet-master
 ```
 
 ### Img2posGAN enviroment on work station 111
-- Start and execuvate docker:
+- Start and execute docker:
 ```
 docker start zy_ pix2pix 
 docker exec -it zy_pix2pix bash
