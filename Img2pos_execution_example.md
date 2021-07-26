@@ -29,13 +29,14 @@ Img2pos GAN Execution Example
 			```
 
 ## :large_orange_diamond: Testing
+
 - Modify testing code including:
 	- img2pos_api.py: imported by img2pos_run_basics_benchmark_batch_yaw_cropped_show_depress.py
 	- img2pos_run_basics_benchmark_batch_yaw_cropped_depress_angle.py: record angle(pitch/yaw/roll) of each images and inference for benchmark data and show performance
 		- [nme2d, nme3d, landmark2d, landmark3d]: total mean error (2000/2000)
 		- [0-30, 30-60, 60-90, mean]: 2D 68 landmark benchmark with different yaw range, mean is 3/3 
-		- 修改export_model_dir / error_report name / os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-		- output: error_report
+		- modify export_model_dir / error_report name / os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+		- output: performance and error_report
 		- Run command
 			```
 			python img2pos_run_basics_benchmark_batch_yaw_cropped_depress_angle.py
@@ -43,8 +44,8 @@ Img2pos GAN Execution Example
 	
 	- img2pos_run_basics_benchmark_batch_yaw_cropped_show_depress.py: show benchmark visualization results
 		- pose, dense, mesh, ...
-		- 修改export_model_dir / save_folder / error_report name / os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-		- output: error_report and demo
+		- modify export_model_dir / save_folder / error_report name / os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+		- output: performance, error_report and demo
 		- Run command
 			```
 			python img2pos_run_basics_benchmark_batch_yaw_cropped_show_depress.py

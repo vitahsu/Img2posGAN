@@ -39,6 +39,8 @@ Environment Setup
 	exit
 	# Into container
 	docker exec -it container_name bash
+	# 改權限可以刪東西
+	chmod 777 -R file/
 	```
 6. Tensorboard (local suggested)
 	```
@@ -64,6 +66,48 @@ Environment Setup
 - Commit image from [vlsilab docker](https://www.docker.com/get-started)
 	- Sign in: vlsilab / vlsi95514
 	- Find image: vlsilab/zy_prnet:latest
+- Example
+	- test on 102
+		```
+		docker pull vlsilab/zy_prnet:latest
+		# make sure pull image sucessfully
+		docker images
+		# create container
+		docker run -it --gpus all --name zy_prnet_test --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_prnet_test:latest
+		exit
+		# make sure create container sucessfully
+		docker ps -a 
+		# start containor
+		docker start zy_prnet_test
+		# exec containor
+		docker exec -it zy_prnet_test bash
+		# move to code file path
+		cd /srv/big_data/zy/PRNet_tensorflow
+		# try trainin code
+		python main_aug_rstce_xnor_281_cer3090.py
+		```
+		
+	- test on 111 :x:
+		# tf mismatch with ubantu version
+		```
+		docker pull vlsilab/zy_prnet:latest
+		# make sure pull image sucessfully
+		docker images
+		# create container
+		docker run -it --name zy_prnet_test --runtime=nvidia --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_prnet:latest
+		exit
+		# make sure create container sucessfully
+		docker ps -a 
+		# start containor
+		docker start zy_prnet_test
+		# exec containor
+		docker exec -it zy_prnet_test bash
+		# move to code file path
+		cd /srv/ssd1/zy/PRNet_tensorflow
+		# try trainin code
+		python main_aug_rstce_xnor_281_cer3090.py
+		```
+<br>
 
 ### Img2posGAN enviroment
 - Commit image from [vlsilab docker](https://www.docker.com/get-started)
@@ -77,6 +121,15 @@ Environment Setup
 		docker images
 		# create container
 		docker run -it --gpus all --name zy_pix2pix_test --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_pix2pix:latest
+		exit
+		# make sure create container sucessfully
+		docker ps -a 
+		# start containor
+		docker start zy_pix2pix_test
+		# exec containor
+		docker exec -it zy_pix2pix_test bash
+		# move to code file path
+		cd /srv/big_data/zy/pix2pix-tensorflow-master
 		# make sure create container sucessfully
 		docker ps -a 
 		# try trainin code
@@ -90,6 +143,15 @@ Environment Setup
 		docker images
 		# create container
 		docker run -it --name zy_pix2pix_test --runtime=nvidia --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_pix2pix:latest
+		exit
+		# make sure create container sucessfully
+		docker ps -a 
+		# start containor
+		docker start zy_pix2pix_test
+		# exec containor
+		docker exec -it zy_pix2pix_test bash
+		# move to code file path
+		cd /srv/big_data/zy/pix2pix-tensorflow-master
 		# make sure create container sucessfully
 		docker ps -a 
 		# try trainin code

@@ -37,4 +37,9 @@ Code and Dataset
 		- AFLW2000_image_cropped: cropped images
 - Details: How to transform 2D image and 3DMM parameter to uv position map?
 	- please follow [here](https://github.com/YadiraF/face3d/blob/master/examples/8_generate_posmap_300WLP.py)
-
+	- zy_pix2pix 
+		- /srv/ssd1/zy/face3d-master/examples/8_generate_posmap_300WLP.py
+		- run command
+			```
+			python 8_generate_posmap_300WLP.py
+			```
