@@ -67,18 +67,30 @@ nvidia-smi
 	- Find image: vlsilab/zy_pix2pix:latest
 - Example
 	- test on 102
-```
-docker pull vlsilab/zy_pix2pix:latest
-# make sure pull image sucessfully
-docker images
-# create container
-docker run -it --gpus all --name zy_pix2pix_test --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_pix2pix:latest
-# make sure create container sucessfully
-docker ps -a 
-# trainin code
-CUDA_VISIBLE_DEVICES=1 python img2pos_mask_with_export_v2_depress_DAE_EBGAN_lr_decay0.8_v2_lr5e5_0326_pretrainD_fix2_aug_cer10_45.py --mode train --checkpoint train_model_mask_DAE_0310_lr_decay0.8_v2_lr5e5_pretrain_b32 --output_dir 102_train_model_mask_DAE_EBGAN_0614_lr_decay0.8_v2_lr5e5_pretrainD_b32_fix2_aug_cer_cer10_45 --max_epochs 400 --input_dir /srv/big_data/zy/PRNet_tensorflow/training_data/InputImage --which_direction AtoB
-```
-
+		```
+		docker pull vlsilab/zy_pix2pix:latest
+		# make sure pull image sucessfully
+		docker images
+		# create container
+		docker run -it --gpus all --name zy_pix2pix_test --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_pix2pix:latest
+		# make sure create container sucessfully
+		docker ps -a 
+		# trainin code
+		CUDA_VISIBLE_DEVICES=1 python img2pos_mask_with_export_v2_depress_DAE_EBGAN_lr_decay0.8_v2_lr5e5_0326_pretrainD_fix2_aug_cer10_45.py --mode train --checkpoint train_model_mask_DAE_0310_lr_decay0.8_v2_lr5e5_pretrain_b32 --output_dir 102_train_model_mask_DAE_EBGAN_0614_lr_decay0.8_v2_lr5e5_pretrainD_b32_fix2_aug_cer_cer10_45 --max_epochs 400 --input_dir /srv/big_data/zy/PRNet_tensorflow/training_data/InputImage --which_direction AtoB
+		```
+		
+	- test on 111
+			```
+		docker pull vlsilab/zy_pix2pix:latest
+		# make sure pull image sucessfully
+		docker images
+		# create container
+		docker run -it --name zy_pix2pix_test --runtime=nvidia --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_pix2pix:latest
+		# make sure create container sucessfully
+		docker ps -a 
+		# trainin code
+		CUDA_VISIBLE_DEVICES=0 python img2pos_mask_with_export_v2_depress_DAE_EBGAN_lr_decay0.8_v2_lr5e5_0326_pretrainD_fix2_aug_cer30_90_ns.py --mode train --checkpoint 102_train_model_mask_DAE_0310_lr_decay0.8_v2_lr5e5_pretrain_b32 --output_dir train_model_mask_DAE_EBGAN_0617_lr_decay0.8_v2_lr5e5_pretrainD_b32_fix2_aug_cer30_90_ns_test --max_epochs 300 --input_dir /srv/ssd1/zy/pix2pix-tensorflow-master/training_data/InputImage --which_direction AtoB
+		
 <br>
 
 ## :large_orange_diamond: Existing enviroment
@@ -114,4 +126,41 @@ docker exec -it zy_pix2pix bash
 cd /srv/ssd1/zy/pix2pix-tensorflow-master
 ```
 
+## Supplement
 
+### 102
+- 打包自己的images上vlsilab docker hub
+```
+# 打包
+docker commit container_id zy_prnet:latest
+# 把要上傳到docker hub的image加上tag
+docker tag zy_prnet:latest vlsilab/zy_prnet
+# log in docker hub (vlsilab/vlsi95514)
+docker login
+# push image
+docker push vlsilab/zy_prnet:latest
+```
+
+- Pull image to create containor
+```
+docker pull vlsilab/zy_pix2pix_final_test:latest
+```
+
+
+### 111
+- 打包自己的images上vlsilab docker hub
+```
+# 打包
+docker commit container_id zy_pix2pix_test:v1
+# 把要上傳到docker hub的image加上tag
+docker tag zy_pix2pix_test:v1 vlsilab/zy_pix2pix_final_test
+# log in docker hub (vlsilab/vlsi95514)
+docker login
+# push image
+docker push vlsilab/zy_pix2pix_final_test:latest
+```
+
+- Pull image to create containor
+```
+docker pull vlsilab/zy_pix2pix_final_test:latest
+```

@@ -6,7 +6,7 @@ Img2pos GAN Execution Example
 	- img2pos_mask_with_export_v2_depress_DAE_EBGAN_lr_decay0.8_v2_lr5e5_0326_pretrainD_fix2_aug_cer30_90_ns.py: main training code
 	- img2pos_mask_with_export_v2_depress_DAE_EBGAN_lr_decay0.8_v2_lr5e5_0326_pretrainD_fix2_aug_cer30_90_ns_export.py: export model
 	- augmentation_rstce_xnor_281_cer30_90_ns.py: adjust online data augmentation parameters
-		- Trandforming (scale, rotation, translation)
+		- Transforming (scale, rotation, translation)
 		- Color channel scaling
 		- Erasing
 - Run command line on work station

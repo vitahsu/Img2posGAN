@@ -5,11 +5,6 @@ docker run -it --gpus all --name zy_pix2pix_test --ipc=host -v /srv:/srv -v /tmp
 docker ps -a :確認有創container成功
 CUDA_VISIBLE_DEVICES=1 python img2pos_mask_with_export_v2_depress_DAE_EBGAN_lr_decay0.8_v2_lr5e5_0326_pretrainD_fix2_aug_cer10_45.py --mode train --checkpoint train_model_mask_DAE_0310_lr_decay0.8_v2_lr5e5_pretrain_b32 --output_dir 102_train_model_mask_DAE_EBGAN_0614_lr_decay0.8_v2_lr5e5_pretrainD_b32_fix2_aug_cer_cer10_45 --max_epochs 400 --input_dir /srv/big_data/zy/PRNet_tensorflow/training_data/InputImage --which_direction AtoB
 
-測試完畢刪除container
-docker stop container_id
-docker rm container_id
-docker rmi image_id
-
 test on 111
 docker run -it --name zy_pix2pix_test --runtime=nvidia --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_pix2pix:latest
 docker ps -a :確認有創container成功
@@ -28,6 +23,11 @@ img2pos_run_basics_benchmark_batch_yaw_cropped_show_depress.py
 output: error_report and demo
 
 
+
+測試完畢刪除container
+docker stop container_id
+docker rm container_id
+docker rmi image_id
 
 
 - Run command line on work station
