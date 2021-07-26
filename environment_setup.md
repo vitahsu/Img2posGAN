@@ -19,13 +19,13 @@ docker image ls
 ```
 docker run -it (--rm) --gpus "device=0,1" --name zy_PRNet_tensorboard --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 -p 8080:8080 tensorflow/tensorflow:2.0.0-gpu-py3
 ```
-> tensorflow/tensorflow:2.0.0-gpu-py3 can place to any image name => REPOSITORY:TAG
-> --gpus all          : how many gpu you will use
-> -it               
-> --name XXXXXXX      : name container
-> -v /srv..........   : mount host path into container
-> -p XX:XX            : tensorboard port
-> 最後記得改成自己的tensorflow,還可以額外再加上自己想要的指令
+> tensorflow/tensorflow:2.0.0-gpu-py3 can place to any image name => REPOSITORY:TAG<br>
+> --gpus all          : how many gpu you will use<br>
+> -it               <br>
+> --name XXXXXXX      : name container<br>
+> -v /srv..........   : mount host path into container<br>
+> -p XX:XX            : tensorboard port<br>
+> 最後記得改成自己的tensorflow,還可以額外再加上自己想要的指令<br>
 
 5. Other commands
 ```
