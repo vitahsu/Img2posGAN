@@ -192,7 +192,7 @@ docker exec -it zy_pix2pix bash
 cd /srv/ssd1/zy/pix2pix-tensorflow-master
 ```
 
-## Supplement
+## :large_orange_diamond: Supplement
 
 ### 102
 - 打包自己的images上vlsilab docker hub
