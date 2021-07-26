@@ -10,9 +10,9 @@ PRNet Execution Example
 		- Color channel scaling
 		- Erasing
 - Run command line on work station
-```
-python main_aug_rstce_xnor_281_cer3090.py
-```
+	```
+	python main_aug_rstce_xnor_281_cer3090.py
+	```
 
 
 ## :large_orange_diamond: Testing
@@ -21,12 +21,19 @@ python main_aug_rstce_xnor_281_cer3090.py
 	- run_basics_benchmark_batch_yaw_cropped_angle.py: record angle(pitch/yaw/roll) of each images and inference for benchmark data and show performance
 		- [nme2d, nme3d, landmark2d, landmark3d]: total mean error (2000/2000)
 		- [0-30, 30-60, 60-90, mean]: 2D 68 landmark benchmark with different yaw range, mean is 3/3 
+		- Run command
+			```
+			python run_basics_benchmark_batch_yaw_cropped_angle.py
+			```
 	- run_basics_benchmark_batch_yaw_cropped_show.py: show benchmark visualization results
 		- pose, dense, mesh, ...
+		- Run command
+			```
+			python run_basics_benchmark_batch_yaw_cropped_show.py
+			```
+			
 	- demo_inference.py: infernece for a new single 2D facial images
-- Run command line on work station
-```
-python run_basics_benchmark_batch_yaw_cropped_angle.py
-python run_basics_benchmark_batch_yaw_cropped_show.py
-python demo_inference.py
-```
+		- Run command
+			```
+			python demo_inference.py
+			```

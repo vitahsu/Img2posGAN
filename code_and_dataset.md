@@ -22,9 +22,10 @@ Code and Dataset
 	- draw_CED.py: paper figure
 	- error_bar: comparison of models and do pose analysis and thesis figures
 		- information in total_error_list_2Dkp is important!!!!!!!!!! 
-		
+	- run on pycharm in local PC
+	
 ## :large_orange_diamond: Dataset setup
-- Untar training_dataset.tar and benchmark_dataset.tar from handover/3_Code/ to your desired path
+- Untar training_dataset.tar and benchmark_dataset.tar from handover/3_Code/Dataset/ to your desired path
 	- training_dataset.tar: 300W-LP download from [3DFFA official website](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm)
 		- angle_npy: pose including pitch, yaw, and roll in each data
 		- InputImage: 2D facial images
