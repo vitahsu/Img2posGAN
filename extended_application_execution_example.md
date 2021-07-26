@@ -4,7 +4,7 @@ Extended Application Execution Example
 ## :large_orange_diamond: Resources
 
 ### Two resorces
-- FaceProfilingRelease_v1.1 [3DFA](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm)
+- FaceProfilingRelease_v1.1 [3DDFA](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm)
 - CVPR2015_HPEN [HPEN](https://drive.google.com/file/d/1-hYpQy1EXZXiOUzlKikDjF8oaobB25iL/view)
 
 ### Data flow with background
