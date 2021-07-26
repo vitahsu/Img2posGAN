@@ -18,9 +18,9 @@ Environment Setup
 4. Create container
 	```
 	#  example on 102
-	docker run -it --gpus "device=0,1" --name zy_PRNet_tensorboard --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 -p 8080:8080 tensorflow/tensorflow:2.0.0-gpu-py3
+	docker run -it --gpus all --name zy_PRNet_tensorboard --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 -p 8080:8080 tensorflow/tensorflow:2.0.0-gpu-py3
 	```
-	> --gpus all          : how many gpu you will use<br>
+	> --gpus all          : how many gpu you will use  / "device=0,1" <br>
 	> -it               <br>
 	> --name XXXXXXX      : name container<br>
 	> -v /srv..........   : mount host path into container<br>
