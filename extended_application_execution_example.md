@@ -1,7 +1,7 @@
 Extended Application Execution Example
 ===
 
-## Resources
+## :large_orange_diamond: Resources
 使用兩包online open resource(D:\FaceProfilingRelease_v1.1)(D:\CVPR2015_HPEN)
 首先將我們自己模型所偵測出的68點lanmark利用notepad++轉換格式
 並且放置在D:\CVPR2015_HPEN\High-Fidelity_PEN\Samples

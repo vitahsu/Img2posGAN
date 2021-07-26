@@ -1,7 +1,7 @@
 PRNet Execution Example
 ===
 
-## Training
+## :large_orange_diamond: Training
 - Modify training code including:
 	- main_aug_rstce_xnor_281_cer3090.py: main training code
 	- model_aug_rstce_xnor_281_cer3090.py: modify model architecture
@@ -15,7 +15,7 @@ python main_aug_rstce_xnor_281_cer3090.py
 ```
 
 
-## Testing
+## :large_orange_diamond: Testing
 - Modify testing code including:
 	- api.py: modify model path
 	- run_basics_benchmark_batch_yaw_cropped_angle.py: record angle(pitch/yaw/roll) of each images and inference for benchmark data and show performance

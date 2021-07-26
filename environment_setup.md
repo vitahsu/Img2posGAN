@@ -59,12 +59,25 @@ nvidia-smi
 ### PRNet enviroment
 - Commit image from [vlsilab docker](https://www.docker.com/get-started)
 	- Sign in: vlsilab / vlsi95514
-	- Find image: vlsilab/zy_PRNet
+	- Find image: vlsilab/zy_PRNet:latest
 
 ### Img2posGAN enviroment
 - Commit image from [vlsilab docker](https://www.docker.com/get-started)
 	- Sign in: vlsilab / vlsi95514
-	- Find image: vlsilab/zy_pix2pix
+	- Find image: vlsilab/zy_pix2pix:latest
+- Example
+	- test on 102
+```
+docker pull vlsilab/zy_pix2pix:latest
+# make sure pull image sucessfully
+docker images
+# create container
+docker run -it --gpus all --name zy_pix2pix_test --ipc=host -v /srv:/srv -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 vlsilab/zy_pix2pix:latest
+# make sure create container sucessfully
+docker ps -a 
+# trainin code
+CUDA_VISIBLE_DEVICES=1 python img2pos_mask_with_export_v2_depress_DAE_EBGAN_lr_decay0.8_v2_lr5e5_0326_pretrainD_fix2_aug_cer10_45.py --mode train --checkpoint train_model_mask_DAE_0310_lr_decay0.8_v2_lr5e5_pretrain_b32 --output_dir 102_train_model_mask_DAE_EBGAN_0614_lr_decay0.8_v2_lr5e5_pretrainD_b32_fix2_aug_cer_cer10_45 --max_epochs 400 --input_dir /srv/big_data/zy/PRNet_tensorflow/training_data/InputImage --which_direction AtoB
+```
 
 <br>
 
@@ -80,6 +93,17 @@ cd /srv/big_data/zy/PRNet_tensorflow
 # for testing
 cd /srv/big_data/zy/PRNet-master
 ```
+<br>
+
+### Img2posGAN enviroment on work station 102
+- Start and execute docker:
+```
+docker start zy_ pix2pix 
+docker exec -it zy_pix2pix bash
+# for both training and testing
+cd /srv/big_data/zy/pix2pix-tensorflow-master
+```
+<br>
 
 ### Img2posGAN enviroment on work station 111
 - Start and execute docker:

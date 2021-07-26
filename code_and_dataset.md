@@ -1,7 +1,7 @@
 Code and Dataset
 ===
 
-## Code setup
+## :large_orange_diamond: Code setup
 ### PRNet
 - Path to code (handover/3_Code/PRNet.zip)
 	- training_code_PRNet_tensorflow
@@ -23,7 +23,7 @@ Code and Dataset
 	- error_bar: comparison of models and do pose analysis and thesis figures
 		- information in total_error_list_2Dkp is important!!!!!!!!!! 
 		
-## Dataset setup
+## :large_orange_diamond: Dataset setup
 - Untar training_dataset.tar and benchmark_dataset.tar from handover/3_Code/ to your desired path
 	- training_dataset.tar: 300W-LP download from [3DFFA official website](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm)
 		- angle_npy: pose including pitch, yaw, and roll in each data
