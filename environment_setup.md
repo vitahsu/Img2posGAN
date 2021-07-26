@@ -88,7 +88,7 @@ Environment Setup
 		```
 		
 	- test on 111 :x:
-		# tf mismatch with ubantu version
+		- tf mismatch with ubantu version
 		```
 		docker pull vlsilab/zy_prnet:latest
 		# make sure pull image sucessfully
