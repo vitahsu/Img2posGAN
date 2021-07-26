@@ -19,6 +19,7 @@ Code and Dataset
 
 ### Experimental results analysis
 - Path to code (handover/3_Code/paper_analysis)
+	- data_angle: angle of training dataset
 	- draw_CED.py: paper figure
 	- error_bar: comparison of models and do pose analysis and thesis figures
 		- information in total_error_list_2Dkp is important!!!!!!!!!! 

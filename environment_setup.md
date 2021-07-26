@@ -41,6 +41,9 @@ Environment Setup
 	docker exec -it container_name bash
 	# 改權限可以刪東西
 	chmod 777 -R file/
+	# delete container and image
+	docker rm container_id
+	docker rmi image_id
 	```
 6. Tensorboard (local suggested)
 	```
