@@ -1,7 +1,7 @@
 Environment Setup
 ===
 
-## :tw-1f538: Basic idea requirements
+## :large_orange_diamond: Basic idea requirements
 ### 
 - Reference slides (zy_handover/2_Meeting_slides/Tutorial/ciw_docker_environment.pptx)
 
@@ -53,7 +53,7 @@ http://localhost:8080/
 nvidia-smi
 ```
 <br>
-## :tw-1f538: Create new enviroment
+## :large_orange_diamond: Create new enviroment
 
 ### PRNet enviroment
 - Commit image from [vlsilab docker](https://www.docker.com/get-started)
@@ -66,7 +66,7 @@ nvidia-smi
 	- Find image: vlsilab/zy_pix2pix
 
 <br>
-## :tw-1f538: Existing enviroment
+## :large_orange_diamond: Existing enviroment
 
 ### PRNet enviroment on work station 102 
 - Start and execute docker:
