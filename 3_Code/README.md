@@ -9,9 +9,10 @@
 ### Directory structure
 ```
 <ROOT>
-├── Dataset.zip
-├── PRNet.zip
-├── Img2posGAN.zip
-├── Paper_analysis.zip
+├── Dataset
+├── PRNet
+├── Img2posGAN
+├── Extended_application
+├── Paper_analysis
 ```
 
