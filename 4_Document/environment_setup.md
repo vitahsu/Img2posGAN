@@ -46,6 +46,38 @@ Environment Setup
 	docker rmi image_id
 	```
 6. Tensorboard (local suggested)
+	setting anaconda and python(tensorflow+tensorboard)
+
+	Anaconda
+	```
+	(base) C:\Users\vita>conda create -n python3.6.9 python=3.6.9
+	```
+	To activate this environment
+	```
+	$conda activate python3.6.9
+	```
+	To deactivate an active environment
+	```
+	$ conda deactivate
+	```
+	
+	install tensorflow
+	=> check with work station image
+	```
+	(python3.6.9) C:\Users\vita> pip install tensorflow==1.15.2
+	(python3.6.9) C:\Users\vita>python
+	>>> import tensorflow as tf
+	>>> print(tf.__version__)
+	1.15.2
+	```
+	=> check the right tensorflow version
+
+	```
+	(python3.6.9) C:\Users\vita>tensorboard --logdir="F:/pix2pix_111/train_model_mask_1224/trylog/" --port=8080
+	```
+	有問題!!!!!tensorboard頁面跑不出來
+	檢查工作站(111)環境設定改tensorflow版本至1.14.0(NO!!!!)=> 1.13.1 => work!!
+
 	```
 	tensorboard --logdir=D:\Mnist_tensorflow_practice/Tensorboard --port=8080
 	http://localhost:8080/
