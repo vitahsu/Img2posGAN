@@ -186,7 +186,7 @@ Environment Setup
 		# exec containor
 		docker exec -it zy_pix2pix_test bash
 		# move to code file path
-		cd /srv/big_data/zy/pix2pix-tensorflow-master
+		cd /srv/ssd1/zy/pix2pix-tensorflow-master
 		# make sure create container sucessfully
 		docker ps -a 
 		# try trainin code
